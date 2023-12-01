@@ -29,7 +29,7 @@ You could go to [Composer](https://getcomposer.org/) and [npm](https://www.npmjs
 4. Generate an app encryption key `php artisan key:generate`
 5. Create an empty database.
 6. In the .env file, add database information to allow Laravel to connect to the database.
-7. In the .env file, add mailer information to allow Laravel to send email verification.
+7. In the .env file, add mailer information to allow Laravel to send email verification. In this case, you could use [Mailtrap](https://mailtrap.io/)
 8. Migrate the database `php artisan migrate`
 9. Seed the database `php artisan db:seed`
 

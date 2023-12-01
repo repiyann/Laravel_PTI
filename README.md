@@ -39,6 +39,16 @@ You could go to [Composer](https://getcomposer.org/) and [npm](https://www.npmjs
 2. Run TailwindCSS `npm run dev`
 3. Open http://localhost:8000 with your browser to see the result.
 
+### Existing Accounts
+
+The database already contains a sample account to test things out with. Use that or head over to the signup page and start making new accounts.
+
+```
+Username            | Password
+admin@example.com   | 111
+user@example.com    | 111
+```
+
 # Author
 
 10121194 - Muhamad Repiyan Riski - IF 5

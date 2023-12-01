@@ -33,7 +33,7 @@
             </a>
             <ul class="flex items-center">
                 <li class="block py-2 pr-6">
-                    <button class="rounded-md focus:outline-none focus:shadow-outline-purple" @click="toggleTheme" aria-label="Toggle color mode">
+                    <button class="rounded-md focus:outline-none focus:shadow-outline-purple mt-2" @click="toggleTheme" aria-label="Toggle color mode">
                         <template x-if="dark">
                             <svg class="w-5 h-5" aria-hidden="true" fill="white" viewBox="0 0 20 20">
                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>

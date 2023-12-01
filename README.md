@@ -11,10 +11,7 @@ Created to fulfill the mid-semester exam assignment for the Application of Inter
 * [Laravel](https://laravel.com/)
 * [TailwindCSS](https://tailwindcss.com/)
 * [Laravel Breeze](https://laravel.com/docs/10.x/starter-kits)
-<<<<<<< HEAD
 * [Font Awesome](https://fontawesome.com/)
-=======
->>>>>>> d2a9686 (Update Landing Page with Dark Mode)
   
 # Getting Started
 

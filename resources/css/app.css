@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap");
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Signika", sans-serif;
+}
+
+/* My Styles */
+.hero {
+  @apply px-32 py-20;
+}
+
+.about {
+  @apply px-32 pb-10;
+}
+
+.footer {
+  @apply px-32 mt-7 pb-10;
+}
+
+.hero-image {
+  @apply w-80 h-40
+}

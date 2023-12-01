@@ -44,9 +44,10 @@ You could go to [Composer](https://getcomposer.org/) and [npm](https://www.npmjs
 The database already contains a sample account to test things out with. Use that or head over to the signup page and start making new accounts.
 
 ```
-Username            | Password
-admin@example.com   | 111
-user@example.com    | 111
+Username            | Password |
+-------------------------------|
+admin@example.com   | 111      |
+user@example.com    | 111      |
 ```
 
 # Author

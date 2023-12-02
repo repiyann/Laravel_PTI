@@ -1,4 +1,4 @@
 @extends('admin.app')
 
-@section('content') 
-@endsection 
+@section('content')
+@endsection

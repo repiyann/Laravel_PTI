@@ -7,32 +7,38 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function dashboard() {
+    public function dashboard()
+    {
         return view('admin.dashboard');
     }
 
-    public function orders() {
+    public function orders()
+    {
         return view('admin.orders');
     }
 
-    public function tables() {
-        return view('admin.tables');
-    }
-
-    public function foods() {
+    public function foods()
+    {
         return view('admin.foods');
     }
 
-    public function sales() {
+    public function sales()
+    {
         return view('admin.sales');
     }
 
-    public function users() {
+    public function users()
+    {
         return view('admin.users');
     }
 
-    public function modals() {
+    public function modals()
+    {
         return view('admin.modals');
     }
-    
+
+    public function tables()
+    {
+        return view('admin.tables');
+    }
 }

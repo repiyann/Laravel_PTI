@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="relative px-6 py-3">
-            @if (request()->segment(2) == 'sales')
+                @if (request()->segment(2) == 'sales')
                 <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
                 @endif
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ (request()->segment(2) == 'sales') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('admin.content.sales') }}">
@@ -39,7 +39,7 @@
                 </a>
             </li>
             <li class="relative px-6 py-3">
-            @if (request()->segment(2) == 'foods')
+                @if (request()->segment(2) == 'foods')
                 <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
                 @endif
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ (request()->segment(2) == 'foods') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('admin.content.foods') }}">
@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li class="relative px-6 py-3">
-            @if (request()->segment(2) == 'users')
+                @if (request()->segment(2) == 'users')
                 <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
                 @endif
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ (request()->segment(2) == 'users') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('admin.content.users') }}">
@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li class="relative px-6 py-3">
-            @if (request()->segment(2) == 'modals')
+                @if (request()->segment(2) == 'modals')
                 <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
                 @endif
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ (request()->segment(2) == 'modals') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('admin.content.modals') }}">
@@ -73,7 +73,7 @@
                 </a>
             </li>
             <li class="relative px-6 py-3">
-            @if (request()->segment(2) == 'tables')
+                @if (request()->segment(2) == 'tables')
                 <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
                 @endif
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ (request()->segment(2) == 'tables') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('admin.content.tables') }}">

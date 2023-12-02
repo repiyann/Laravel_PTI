@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // 2 kode di bawah untuk check role dan hanya bisa membuka halaman dashboard sesuai role masing-masing
 Route::middleware(['auth', 'role:user', 'verified'])->group(function () {
@@ -28,7 +28,6 @@ Route::middleware(['auth', 'role:user', 'verified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 });
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
@@ -38,5 +37,5 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/foods', [AdminController::class, 'foods'])->name('admin.content.foods');
     Route::get('admin/tables', [AdminController::class, 'tables'])->name('admin.content.tables');
     Route::get('admin/users', [AdminController::class, 'users'])->name('admin.content.users');
-    Route::get('admin/modals', [AdminController::class,'modals'])->name('admin.content.modals');
+    Route::get('admin/modals', [AdminController::class, 'modals'])->name('admin.content.modals');
 });

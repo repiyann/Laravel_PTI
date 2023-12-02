@@ -5,13 +5,13 @@
   Foods
 </h2>
 
-<div class="mb-2">
-  <a href="{{ route('admin.content.add') }}" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+<div>
+  <a href="{{ route('admin.content.add') }}" class="inline-block px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
     Add New Food
   </a>
 </div>
 
-<div class="mb-8">
+<div class="mb-8 mt-1">
   <div class="w-full overflow-hidden rounded-lg shadow-xs">
     <div class="w-full overflow-x-auto">
       <table class="w-full whitespace-no-wrap">
@@ -49,7 +49,7 @@
                 Pending
               </span>
             </td>
-            <td class="pr-4 py-3">
+            <td class="px-4 py-3">
               <div class="flex items-center space-x-4 text-sm">
                 <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray" aria-label="Edit">
                   <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512" fill="currentColor">

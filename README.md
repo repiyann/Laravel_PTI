@@ -2,7 +2,7 @@
 
 Effortless restaurant management and customer ordering with a simple Laravel site. Secure and explore Dark Mode for a comfortable browsing experience.
 
-![Image](https://github.com/repiyann/Laravel_PTI/assets/92260886/ef5bde52-c80b-4297-9e90-853c5c5cf2c9)
+![Image](https://github.com/repiyann/Laravel-PTI/assets/92260886/7b94cb9e-99e9-4ca3-86c0-999c76893ef4)
 
 ## Description
 

@@ -29,11 +29,11 @@
         <nav class="flex justify-between items-center px-32 py-3">
             <a href="/" class="text-3xl font-semibold dark:text-white">
                 <i class="fa-solid fa-drumstick-bite" style="color: #9333ea;"></i>
-                Kilat Friend Chicken
+                Ka-Chow Friend Chicken
             </a>
             <ul class="flex items-center">
                 <li class="block py-2 pr-6">
-                    <button class="rounded-md focus:outline-none focus:shadow-outline-purple mt-2" @click="toggleTheme" aria-label="Toggle color mode">
+                    <button class="rounded-md focus:outline-none focus:shadow-outline-purple mt-1" @click="toggleTheme" aria-label="Toggle color mode">
                         <template x-if="dark">
                             <svg class="w-5 h-5" aria-hidden="true" fill="white" viewBox="0 0 20 20">
                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -53,7 +53,7 @@
                 </li>
                 <li class="block py-2 pr-6">
                     <a href="#about" class="text-lg hover:text-[#9333ea] dark:text-white dark:hover:text-dark">
-                        Tentang Kami
+                        About Us
                     </a>
                 </li>
                 <li class="block py-2 pr-10">
@@ -73,11 +73,11 @@
                 <div class="grid grid-cols-2 gap-10 pb-20">
                     <div class="col-start-1 col-end-1 m-auto">
                         <h1 class="text-4xl mb-5 dark:text-white">
-                            Kilat Fried Chicken — Rasakan Kelezatan Tanpa Menunggu!
+                            Ka-Chow Fried Chicken — Where Flavor Meets Velocity!
                         </h1>
                         @if (Route::has('register'))
                         <a href="{{ route('register')}}" class="bg-[#9333ea] text-white text-lg border-white rounded-xl px-2 py-2 hover:bg-[#4c1b7a]">
-                            Beli Sekarang
+                            Buy Now!
                         </a>
                         @endif
                     </div>
@@ -95,17 +95,16 @@
                     </div>
                     <div class="col-start-2 col-end-2 m-auto">
                         <h1 class="text-4xl mb-5 font-semibold dark:text-white">
-                            Tentang Kami
+                            About Us
                         </h1>
                         <h3 class="text-2xl mb-2 font-semibold dark:text-white">
-                            Kenapa Memilih Kami?
+                            Why Choose Us?
                         </h3>
                         <div class="text-justify">
                             <p class="mb-1 dark:text-white">
-                                Kenapa Memilih Kami? Kilat Fried Chicken tidak sekadar restoran ayam biasa. Kami menghadirkan lebih dari sekadar rasa lezat ayam. Dengan fokus pada kualitas, layanan kilat, dan kebersihan yang tak tertandingi, Kilat Fried Chicken menjadi pilihan utama Anda.
-                            </p>
+                                Ka-Chow Fried Chicken is not just an ordinary chicken restaurant. We bring more than just the delicious taste of chicken. With a focus on quality, express service and unmatched cleanliness, Ka-Chow Fried Chicken is your top choice. </p>
                             <p class="dark:text-white">
-                            Kilat Fried Chicken bukan hanya restoran ayam, melainkan destinasi kuliner yang menyajikan pengalaman makan yang lengkap. Ketika Anda memilih kami, Anda memilih kualitas, kecepatan, dan kelezatan. Selamat menikmati setiap momen kuliner bersama Kilat Fried Chicken!
+                                Ka-Chow Fried Chicken is not just a chicken restaurant, but a culinary destination that provides a complete dining experience. When you choose us, you choose quality, speed, and deliciousness. Enjoy every culinary moment with Ka-Chow Fried Chicken!
                             </p>
                         </div>
                     </div>

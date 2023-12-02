@@ -29,7 +29,7 @@
         <nav class="flex justify-between items-center px-32 py-3">
             <a href="/" class="text-3xl font-semibold dark:text-white">
                 <i class="fa-solid fa-drumstick-bite" style="color: #9333ea;"></i>
-                Ka-Chow Friend Chicken
+                Ka-Chow Fried Chicken
             </a>
             <ul class="flex items-center">
                 <li class="block py-2 pr-6">

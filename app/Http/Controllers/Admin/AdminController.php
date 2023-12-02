@@ -17,8 +17,7 @@ class AdminController extends Controller
         return view('admin.orders');
     }
 
-    public function foods()
-    {
+    public function foods() {
         return view('admin.foods');
     }
 
@@ -40,9 +39,5 @@ class AdminController extends Controller
     public function tables()
     {
         return view('admin.tables');
-    }
-
-    public function add() {
-        return view('admin.add');
     }
 }

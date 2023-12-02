@@ -73,7 +73,7 @@
                 <div class="grid grid-cols-2 gap-10 pb-20">
                     <div class="col-start-1 col-end-1 m-auto">
                         <h1 class="text-4xl mb-5 dark:text-white">
-                            Kilat Fried Chicken — pesan makanan secepat kilat!
+                            Kilat Fried Chicken — Rasakan Kelezatan Tanpa Menunggu!
                         </h1>
                         @if (Route::has('register'))
                         <a href="{{ route('register')}}" class="bg-[#9333ea] text-white text-lg border-white rounded-xl px-2 py-2 hover:bg-[#4c1b7a]">
@@ -102,14 +102,10 @@
                         </h3>
                         <div class="text-justify">
                             <p class="mb-1 dark:text-white">
-                                Kami adalah restoran yang menyediakan menu makanan
-                                ayam, restoran kami sudah terjamin bersih, halal
-                                dan higienis.
+                                Kenapa Memilih Kami? Kilat Fried Chicken tidak sekadar restoran ayam biasa. Kami menghadirkan lebih dari sekadar rasa lezat ayam. Dengan fokus pada kualitas, layanan kilat, dan kebersihan yang tak tertandingi, Kilat Fried Chicken menjadi pilihan utama Anda.
                             </p>
                             <p class="dark:text-white">
-                                Kami membantu anda dalam memesan makanan agar tidak
-                                repot menunggu di kasir sehingga saat anda datang,
-                                makanan sudah siap saji tanpa perlu menunggu.
+                            Kilat Fried Chicken bukan hanya restoran ayam, melainkan destinasi kuliner yang menyajikan pengalaman makan yang lengkap. Ketika Anda memilih kami, Anda memilih kualitas, kecepatan, dan kelezatan. Selamat menikmati setiap momen kuliner bersama Kilat Fried Chicken!
                             </p>
                         </div>
                     </div>

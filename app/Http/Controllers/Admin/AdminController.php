@@ -41,4 +41,8 @@ class AdminController extends Controller
     {
         return view('admin.tables');
     }
+
+    public function add() {
+        return view('admin.add');
+    }
 }

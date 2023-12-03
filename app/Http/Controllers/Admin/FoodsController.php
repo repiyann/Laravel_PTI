@@ -13,8 +13,8 @@ class FoodsController extends Controller
 {
     public function index(): View
     {
-        // Ambil data terbaru Foods max 10 per page
-        $posts = Foods::latest()->paginate(10);
+        // Ambil data terbaru Foods max 5 per page
+        $posts = Foods::latest()->paginate(5);
 
         // Kirim data posts ke admin.foods
         return view('admin.foods', compact('posts'));
@@ -37,10 +37,12 @@ class FoodsController extends Controller
 
         // Upload Image
         $image = $request->file('image');
-        $image->storeAs('public/posts', $image->hashName());
+        $image->storeAs('public/img', $image->hashName());
         
+        // Ubah kurs menjadi angka
         $price = $request->price;
         $price = str_replace('.', '', $price);
+
         // Mengisi hasil data input ke database 
         Foods::create([
             'name'         => $request->name,
@@ -90,10 +92,10 @@ class FoodsController extends Controller
         if ($request->hasFile('image')) {
             // Upload gambar baru
             $image = $request->file('image');
-            $image->storeAs('public/posts', $image->hashName());
+            $image->storeAs('public/img', $image->hashName());
 
             // Hapus gambar lama
-            Storage::delete('public/posts' . $post->image);
+            Storage::delete('public/img' . $post->image);
 
             // Update dengan gambar baru
             $post->update([
@@ -123,7 +125,7 @@ class FoodsController extends Controller
         $post = Foods::findOrFail($id);
 
         // Hapus gambar
-        Storage::delete('public/posts' . $post->image);
+        Storage::delete('public/img' . $post->image);
 
         // Hapus data
         $post->delete();

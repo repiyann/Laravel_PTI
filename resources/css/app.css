@@ -28,3 +28,14 @@
 .hero-image {
     @apply w-80 h-40;
 }
+
+a:focus .arrow {
+    outline: 2px solid rgba(202, 191, 253, 0.45);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.mt-custom {
+    margin-top: 0.3rem;
+}

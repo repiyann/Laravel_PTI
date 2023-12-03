@@ -45,6 +45,9 @@ You could go to [Composer](https://getcomposer.org/) and [npm](https://www.npmjs
 
 The database already contains a sample account to test things out with. Use that or head over to the signup page and start making new accounts.
 
+> [!NOTE]
+> This project only displays the admin page due to lack of creation time, but you can still try logging in using a user account. For user pages, please wait until this project has been created and tested. The project will be published as soon as the project is completed
+
 ```
       Username      | Password |
 -------------------------------|

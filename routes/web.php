@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\FoodsController;
+use App\Http\Controllers\Admin\FoodsControl;
+use App\Http\Controllers\Admin\UserControl;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -25,7 +26,7 @@ require __DIR__ . '/auth.php';
 
 // 2 kode di bawah untuk check role dan hanya bisa membuka halaman dashboard sesuai role masing-masing
 Route::middleware(['auth', 'role:user', 'verified'])->group(function () {
-    Route::get('user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
+    Route::get('/dashboard', [UserController::class, 'index'])->name('user.dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -39,5 +40,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('admin/tables', [AdminController::class, 'tables'])->name('admin.content.tables');
     Route::get('admin/users', [AdminController::class, 'users'])->name('admin.content.users');
     Route::get('admin/modals', [AdminController::class, 'modals'])->name('admin.content.modals');
-    Route::resource('admin/foods', FoodsController::class)->names(['index' => 'admin.content.foods']);
+    Route::resource('admin/foods', FoodsControl::class)->names(['index' => 'admin.content.foods']);
+    Route::resource('admin/users', UserControl::class)->names(['index' => 'admin.content.users']);
 });

@@ -21,7 +21,7 @@
     </script>
     @elseif (Auth::user()->role == 'user')
     <script type="text/javascript">
-        window.location = "{{ url('/user/dashboard') }}";
+        window.location = "{{ url('/dashboard') }}";
     </script>
     @endif
     @endauth

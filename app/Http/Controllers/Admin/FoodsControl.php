@@ -71,7 +71,7 @@ class FoodsControl extends Controller
         $post = Foods::findOrFail($id);
 
         // Menampilkan halaman edit
-        return view('admin.edit', compact('foods'));
+        return view('admin.edit', ['foods' => $post]);
     }
 
     public function update(Request $request, string $id): RedirectResponse

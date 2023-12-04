@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\DB;
  
 class UserControl extends Controller
 {
@@ -78,7 +77,7 @@ class UserControl extends Controller
     {
         // Validate form
         $this->validate($request, [
-            'status'        => 'required',
+            'status'      => 'required',
             'price'       => 'required|min:4',
             'category'    => 'required|min:5',
             'image'       => 'required|image|mimes:jpeg,jpg,png|max:2048',

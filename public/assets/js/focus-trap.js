@@ -1,51 +1,37 @@
-/**
- * Limit focus to focusable elements inside `element`
- * @param {HTMLElement} element - DOM element to focus trap inside
- * @return {Function} cleanup function
- */
-function focusTrap(element) {
-    const focusableElements = getFocusableElements(element);
-    const firstFocusableEl = focusableElements[0];
-    const lastFocusableEl = focusableElements[focusableElements.length - 1];
+var openmodal = document.querySelectorAll(".modal-open");
+for (var i = 0; i < openmodal.length; i++) {
+    openmodal[i].addEventListener("click", function (event) {
+        event.preventDefault();
+        
+        toggleModal();
+    });
+}
 
-    // Wait for the case the element was not yet rendered
-    setTimeout(() => firstFocusableEl.focus(), 50);
+const overlay = document.querySelector(".modal-overlay");
+overlay.addEventListener("click", toggleModal);
 
-    /**
-     * Get all focusable elements inside `element`
-     * @param {HTMLElement} element - DOM element to focus trap inside
-     * @return {HTMLElement[]} List of focusable elements
-     */
-    function getFocusableElements(element = document) {
-        return [
-            ...element.querySelectorAll(
-                'a, button, details, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            ),
-        ].filter((e) => !e.hasAttribute("disabled"));
+var closemodal = document.querySelectorAll(".modal-close");
+for (var i = 0; i < closemodal.length; i++) {
+    closemodal[i].addEventListener("click", toggleModal);
+}
+
+document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = evt.key === "Escape" || evt.key === "Esc";
+    } else {
+        isEscape = evt.keyCode === 27;
     }
-
-    function handleKeyDown(e) {
-        const TAB = 9;
-        const isTab = e.key.toLowerCase() === "tab" || e.keyCode === TAB;
-
-        if (!isTab) return;
-
-        if (e.shiftKey) {
-            if (document.activeElement === firstFocusableEl) {
-                lastFocusableEl.focus();
-                e.preventDefault();
-            }
-        } else {
-            if (document.activeElement === lastFocusableEl) {
-                firstFocusableEl.focus();
-                e.preventDefault();
-            }
-        }
+    if (isEscape && document.body.classList.contains("modal-active")) {
+        toggleModal();
     }
+};
 
-    element.addEventListener("keydown", handleKeyDown);
-
-    return function cleanup() {
-        element.removeEventListener("keydown", handleKeyDown);
-    };
+function toggleModal() {
+    const body = document.querySelector("body");
+    const modal = document.querySelector(".modal");
+    modal.classList.toggle("opacity-0");
+    modal.classList.toggle("pointer-events-none");
+    body.classList.toggle("modal-active");
 }

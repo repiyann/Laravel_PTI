@@ -61,7 +61,7 @@ class UserControl extends Controller
         $post = User::findOrFail($id);
 
         // Menampilkan hasil data
-        return view('admin.show', ['users' => $post]);
+        return view('admin.users', ['users' => $post]);
     }
 
     public function edit(string $id): View
@@ -70,30 +70,22 @@ class UserControl extends Controller
         $post = User::findOrFail($id);
 
         // Menampilkan halaman edit
-        return view('admin.edit', compact('users'));
+        return view('admin.edit', ['users' => $post]);
     }
 
     public function update(Request $request, string $id): RedirectResponse
     {
         // Validate form
         $this->validate($request, [
-            'status'      => 'required',
-            'price'       => 'required|min:4',
-            'category'    => 'required|min:5',
-            'image'       => 'required|image|mimes:jpeg,jpg,png|max:2048',
-            'description' => 'required|min:5',
+            'status'      => 'required'
         ]);
 
         // Ambil data berdasarkan ID
         $post = User::findOrFail($id);
 
         $post->update([
-            'status'         => $request->status,
-            'price'        => $request->price,
-            'category'     => $request->category,
-            'description'  => $request->description,
+            'status'         => $request->status
         ]);
-
 
         // Kembali ke halaman users
         return redirect()->route('admin.content.users')->with(['success' => 'Data Berhasil Diubah!']);
